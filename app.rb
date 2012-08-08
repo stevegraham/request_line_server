@@ -3,11 +3,6 @@ require 'twilio-rb'
 require 'pusher'
 require 'meta-spotify'
 
-#TODO: use slanger
-Pusher.app_id = '15045'
-Pusher.key    = '78ed511f5afa5e2ceffc'
-Pusher.secret = '6dcadb28cebd31662232'
-
 post '/twilio' do
   channel = 'request-line-' + params['To'].gsub(/^\D/, '')
 
